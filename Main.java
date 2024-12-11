@@ -9,9 +9,7 @@ public class Main {
         int operator;
 
         do {
-            System.out.print("Enter two numbers: ");
-            num1 = scanner.nextDouble();
-            num2 = scanner.nextDouble();
+
             System.out.println("Choose an operation:");
             System.out.println("1. Addition (+)");
             System.out.println("2. Subtraction (-)");
@@ -24,6 +22,15 @@ public class Main {
 
 
                 operator = scanner.nextInt();
+                if (operator==7){
+                    System.out.print("Enter one numbers: ");
+                    num1 = scanner.nextDouble();
+                    num2=1;
+                }else{
+                    System.out.print("Enter two numbers: ");
+                    num1 = scanner.nextDouble();
+                    num2 = scanner.nextDouble();
+                }
 
 
                 switch (operator) {
@@ -53,7 +60,7 @@ public class Main {
                         break;
                     case 7:
                         res = factorial(num1);
-                        System.out.println(num1 + " + " + num2 + " = " +res );
+                        System.out.println("factorial de num 1 est :" +res );
                         break;
                     case 8:
                         System.out.println("Goodbye!");
@@ -88,10 +95,12 @@ public class Main {
     }
 
     public static double factorial(double number) {
-        if (number == 0) {
-            return 1;
-        } else {
-            return number * factorial(number - 1);
+        int i,res;
+        res=1;
+        for (i=1;i<=number;i++){
+            res = res *i;
         }
+        return res;
+
     }
 }
