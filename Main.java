@@ -10,15 +10,17 @@ public class Main {
 
         do {
 
-            System.out.println("Choose an operation:");
-            System.out.println("1. Addition (+)");
-            System.out.println("2. Subtraction (-)");
-            System.out.println("3. Multiplication (*)");
-            System.out.println("4. Division (/)");
-            System.out.println("5. Power (^)");
-            System.out.println("6. Square Root (√)");
-            System.out.println("7. Factorial (!)");
-            System.out.println("8. Exit");
+            System.out.println("Choose an operation:\n"+
+                                "1. Addition (+)\n"+
+                                "2. Subtraction (-)\n"+
+                                "3. Multiplication (*)\n"+
+                                "4. Division (/)\n"+
+                                "5. Power (^)\n"+
+                                "6. Square Root (√)\n"+
+                                "7. Factorial (!)\n"+
+                                "8. Exit\n");
+
+
 
 
                 operator = scanner.nextInt();
@@ -40,23 +42,23 @@ public class Main {
                         break;
                     case 2:
 
-                        System.out.println(num1 + " + " + num2 + " = " + substruction(num1, num2));
+                        System.out.println(num1 + " - " + num2 + " = " + substruction(num1, num2));
                         break;
                     case 3:
 
-                        System.out.println(num1 + " + " + num2 + " = " + multipl(num1, num2));
+                        System.out.println(num1 + " * " + num2 + " = " + multipl(num1, num2));
                         break;
                     case 4:
 
-                        System.out.println(num1 + " + " + num2 + " = " + divisionn(num1, num2));
+                        System.out.println(num1 + " / " + num2 + " = " + divisionn(num1, num2));
                         break;
                     case 5:
 
-                        System.out.println(num1 + " + " + num2 + " = " + power(num1, num2));
+                        System.out.println(num1 + " ^ " + num2 + " = " + power(num1, num2));
                         break;
                     case 6:
                        res = squareRoot(num1);
-                        System.out.println(num1 + " + " + num2 + " = " + res);
+                        System.out.println(num1 + " √ " + num2 + " = " + res);
                         break;
                     case 7:
                         res = factorial(num1);
