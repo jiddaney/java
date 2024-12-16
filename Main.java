@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -30,10 +29,10 @@ public class Main {
                 num1 = scanner.nextDouble();
                 num2=1;
             }else{
-              double[]numbor = NUmber();
-                num1 = numbor[0];
-                num2 = numbor[1];
-
+                System.out.print("Enter one numbers: ");
+                num1 = scanner.nextDouble();
+                System.err.println("Enter tow numbers: ");
+                num2 = scanner.nextDouble();
 
             }
 
@@ -52,17 +51,17 @@ public class Main {
                     System.out.println(num1 + " * " + num2 + " = " +String.format("%.2f",multipl(num1, num2)));
                     break;
                 case 4:
-                    double[] nums = NUmber();
-                    num1 = nums[0];
-                    num2 = nums[1];
-                   
-
-                    do {
-                        System.out.println("ERROR U CAN'T / 0");
-                        nums = NUmber();
-                        num1 = nums[0];
-                        num2 = nums[1];
-                    }while (num2 == 0);
+                    do { 
+                       if(num2==0){
+                        System.out.println("ERROR U CAN'T DIVIDE BY ZERO");
+                        System.err.println("Enter tow numbers: ");
+                        num2 = scanner.nextDouble();
+                       }
+                       
+                      
+                       
+                        
+                    } while (num2==0);
 
                     System.out.println(num1 + " / " + num2 + " = " + String.format("%.2f", divisionn(num1, num2)));
                     break;
@@ -92,7 +91,7 @@ public class Main {
     }
 
 
-    public static double addition(double num1, double num2) {
+    public  static  double addition(double num1, double num2) {
         return num1 + num2;
     }
     public static double divisionn(double num1, double num2) {
@@ -122,14 +121,5 @@ public class Main {
         return res;
 
     }
-   static double[] NUmber (){
-        Scanner scanner = new Scanner(System.in);
-        double[] numbers = new double[2];
-       System.out.print("Enter two numbers: ");
-       numbers[0] = scanner.nextDouble();
-       scanner.nextLine();
-       numbers[1] = scanner.nextDouble();
-       scanner.nextLine();
-       return numbers;
-   }
+   
 }
