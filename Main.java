@@ -29,9 +29,9 @@ public class Main {
                 num1 = scanner.nextDouble();
                 num2=1;
             }else{
-                System.out.print("Enter one numbers: ");
+                System.out.print("Enter number one: ");
                 num1 = scanner.nextDouble();
-                System.err.println("Enter tow numbers: ");
+                System.err.println("Enter number two: ");
                 num2 = scanner.nextDouble();
 
             }
@@ -54,12 +54,9 @@ public class Main {
                     do { 
                        if(num2==0){
                         System.out.println("ERROR U CAN'T DIVIDE BY ZERO");
-                        System.err.println("Enter tow numbers: ");
+                        System.out.println("Enter number two: ");
                         num2 = scanner.nextDouble();
                        }
-                       
-                      
-                       
                         
                     } while (num2==0);
 
